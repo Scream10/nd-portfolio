@@ -6,6 +6,7 @@ Rendez moi visite ici → [nicolasdiot.fr](https://nicolasdiot.vercel.app/)
 
 * React.js
 * Next.js
+* Vercel
 * HTML / CSS
 * SCSS
 * Webpack
@@ -24,12 +25,16 @@ Rendez moi visite ici → [nicolasdiot.fr](https://nicolasdiot.vercel.app/)
     - Edge (87 / 88)
     - IE11 (90 / 91)
 
-#### Prochaines features
+## Prochaines features
 
 * Animation avec GSAP
 * Animation avec ScrollMagic
 
+#### Projets à rajouter
 
+* UCHF : Union des Consuls Honoraires de France
+* Intégration VGB : votre-garage-bois.fr
+* Associtaion France Lituanie : france-lituanie.eu
 
 ##
 © Copyright 2020 - nicolasdiot.fr
