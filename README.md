@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio | Nicolas Diot
 
-## Getting Started
+Rendez moi visite ici → [nicolasdiot.fr](https://nicolasdiot.vercel.app/)
 
-First, run the development server:
+## Outils utilisés
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+* React.js
+* Next.js
+* HTML / CSS
+* SCSS
+* Webpack
+* NPM
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Bonnes pratiques mises en place
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+* Responsive Design
+* Mise en avant des principes BEM
+* Utilisation d'un pre-processeur SCSS
+* Respect des règles W3C pour optimiser le SEO : [vérifiez ici](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-inky.vercel.app%2F)
+* Cross Browser : supporter sur les 2 dernières verions des navigateurs suivants à l'aide de [caniuse.com](https://caniuse.com/?compare=ie+10,ie+11,edge+87,edge+88,firefox+85,firefox+86,chrome+90,chrome+91,safari+13.1,safari+14,ios_saf+13.4-13.7,ios_saf+14.0-14.3,and_chr+88,and_ff+83&compareCats=CSS,HTML5,JS) et [autoprefixer.github.io](https://autoprefixer.github.io/) :
+    - Chrome (90, 91)
+    - Firefox (85, 86)
+    - Safari (13, 14)
+    - Edge (87 / 88)
+    - IE11 (90 / 91)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+#### Prochaines features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+* Animation avec GSAP
+* Animation avec ScrollMagic
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+##
+© Copyright 2020 - nicolasdiot.fr
