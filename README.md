@@ -11,6 +11,7 @@ Rendez moi visite ici → [nicolasdiot.fr](https://nicolasdiot.vercel.app/)
 * SCSS
 * Webpack
 * NPM
+* Vanilla Tilt
 
 ### Bonnes pratiques mises en place
 

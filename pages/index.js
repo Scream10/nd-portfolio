@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Navbar from '../components/navbar'
 import Grid from '../components/grid'
+import Footer from '../components/footer'
+import VanillaTilt from 'vanilla-tilt';
 
 export default function Home() {
+
     return (
         <>
             <Head>
@@ -10,8 +13,10 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
-                    content="Portfolio de Nicolas Diot, développeur free-lance à Troyes. Création de site internet et e-commerce."
+                    content="Portfolio de
+                     Nicolas Diot, développeur free-lance à Troyes. Création de site internet et e-commerce."
                 />
+                <script type="text/javascript" src="vanilla-tilt.js"></script>
             </Head>
             <Grid />
             <Navbar />
@@ -65,12 +70,50 @@ export default function Home() {
                         <div id="realisation">
                             <h2>Réalisations</h2>
                         </div>
+                        <div className="card" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-scale="1.1">
+                            <div className="card__img">
+                                <img src="images/ombelinedurey.jpg" alt="Ombeline Durey"/>
+                            </div>
+                            <div className="card__info">
+                                <div className="card__info-title">
+                                    <h4>Ombeline Durey</h4>
+                                </div>
+                                <div className="card__info-description">
+                                    <p><small>marketing digital</small></p>
+                                </div>
+                                <div className="card__info-discover">
+                                    <p>voir le projet</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card card--right" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-scale="1.1">
+                            <div className="card__img">
+                                <img src="images/ac-studio-1.png" alt="Semi Office"/>
+                            </div>
+                            <div className="card__info">
+                                <div className="card__info-title">
+                                    <h4>Semi Office</h4>
+                                </div>
+                                <div className="card__info-description">
+                                    <p><small>Galerie de design</small></p>
+                                </div>
+                                <div className="card__info-discover">
+                                    <p>voir le projet</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="/portfolio" className="btn">
+                                Portfolio
+                            </a>
+                        </div>
                     </section>
-                    <div>
+                    <section className="contact-banner">
                         <h3>Un projet ? Une question ? N'hésitez pas à <a href="/contact">me contacter</a></h3>
-                    </div>
+                    </section>
                 </div>
             </main>
+            <Footer />
         </>
     )
 }
