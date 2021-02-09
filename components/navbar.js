@@ -2,9 +2,6 @@ export default function Navbar() {
     return (
         <>
             <nav>
-                <div id="nav__title">
-                    <p>nd nicolas</p>
-                </div>
                 <div id="nav__menu">
                     <a>
                         <div className="nav__hamburger"></div>

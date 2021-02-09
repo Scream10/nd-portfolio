@@ -57,13 +57,6 @@ nav {
   top: 0;
   left: 0;
   padding: 1rem 3rem;
-  #nav__title p {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Didot', sans-serif;
-    font-weight: 600;
-    color: $header;
-  }
   #nav__menu {
     position: absolute;
     right: 48px;
@@ -84,6 +77,21 @@ nav {
       top: 15px;
       width: 35px;
     }
+  }
+}
+
+#title {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%);
+
+  p {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Didot', sans-serif;
+    font-weight: 600;
+    color: $header;
   }
 }
 
@@ -157,6 +165,30 @@ nav {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .header__title h1 {
+    font-size: 63px;
+  } 
+}
+
+@media screen and (max-width: 768px) {
+  .header__title {
+    width: 35% !important;
+  }
+  .header__title h1 {
+    font-size: 48px;
+  } 
+}
+
+@media screen and (max-width: 425px) {
+  .header__title {
+    display: none;
+  }
+  .header__img img {
+    width: 100% !important;
+  } 
+}
+
 #discover {
   width: 100%;
   margin-top: 30px;
@@ -196,6 +228,46 @@ nav {
   width: 100%;
   max-width: 536px;
   padding-bottom: 80px;
+}
+
+@media screen and (max-width: 1024px) {
+  .service-description {
+    margin: auto;
+  }
+  .service-description--middle, .service-description--right {
+    left: 0% !important;
+  }
+  #realisation {
+    left: 50% !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #realisation {
+    left: 20% !important;
+    padding-bottom: 100px !important;
+  }
+  #realisation h2 {
+    font-size: 36px;
+  }
+  h2::before {
+    top: 38px !important;
+    width: 55px !important;
+    left: -75px !important;
+  }
+  .card--right {
+    left: 8% !important;
+    top: 150px !important;
+  }
+  .contact-banner {
+    margin-top: 290px !important;
+  }
+  .footer-info {
+    flex-direction: column;
+  }
+  #service-banner .arrow--white {
+    display: none;
+  }
 }
 
 .service-description--middle {
@@ -387,6 +459,15 @@ footer {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+  .footer-copyright, .footer-info {
+    justify-content: center;
   }
 }
 

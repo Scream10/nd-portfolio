@@ -18,17 +18,17 @@ export default function Footer() {
                         <h4 className="underline-gray">Social</h4>
                         <ul>
                             <li>
-                                <a href="https://www.linkedin.com/in/nicolas-diot-96b0b313a/">
+                                <a href="https://www.linkedin.com/in/nicolas-diot-96b0b313a/" target="_blank">
                                     <img className="footer-logo footer-logo--linkedin" src="images/logo_linkedin.png" alt="logo linkedin"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.malt.fr/profile/nicolasdiot">
+                                <a href="https://www.malt.fr/profile/nicolasdiot" target="_blank">
                                     <img className="footer-logo" src="images/logo_malt.png" alt="logo malt"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/Scream10">
+                                <a href="https://github.com/Scream10" target="_blank">
                                     <img className="footer-logo" src="images/logo_github.png" alt="logo malt"/>
                                 </a>
                             </li>

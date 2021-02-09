@@ -20,6 +20,9 @@ export default function Home() {
             </Head>
             <Grid />
             <Navbar />
+            <div id="title">
+                <p>nd nicolas</p>
+            </div>
             <main>
                 <header className="header">
                     <div className="header__img">
@@ -101,11 +104,6 @@ export default function Home() {
                                     <p>voir le projet</p>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <a href="/portfolio" className="btn">
-                                Portfolio
-                            </a>
                         </div>
                     </section>
                     <section className="contact-banner">
