@@ -11,12 +11,13 @@ $primary: #0061F3;
 $secondary: #F39200;
 $header: #201E1E;
 $text: #808080;
-$white: #FBFBFB;
+$white: #FFFFFF;
 $grid-line: #EEEEEE;
+$gray: #E5E5E5;
 $button: #555555;
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+  font-weight: 400;
   font-family: 'Didot', sans-serif;
   color: $header;
 }
@@ -39,6 +40,7 @@ h4 {
 
 p {
   font-family: 'DIN Alternate', sans-serif;
+  font-weight: 400;
   letter-spacing: .5px;
   line-height: 1.5rem;
   font-size: 16px;
@@ -51,87 +53,207 @@ a {
 }
 
 nav {
-  position: sticky;
-  width: calc(100% - 6rem);
-  height: 60px;
+  position: fixed;
+  width: 60px;
+  height: calc(100vh - 6rem);
   top: 0;
   left: 0;
-  padding: 1rem 3rem;
-  #nav__menu {
+  padding: 3rem .5rem;
+  border-right: 1px solid $gray;
+  background: $white;
+  z-index: 10000;
+
+  .title {
     position: absolute;
-    right: 48px;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%);
+
+    p {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Didot', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: $header;
+      border-bottom: 2px solid $header;
+      line-height: 110%;
+      letter-spacing: 1.2px;
+    }
+  }
+
+  #nav-hamburger {
+    position: absolute;
     cursor: pointer;
-    top: 36px;
-    width: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 28px;
+    bottom: 50px;
     height: 19px;
-    .nav__hamburger::after {
-      content: "";
+
+    .nav__hamburger--1{
       position: absolute;
       top: 0;
       right: 0;
-      width: 50px;
-      height: 3px;
+      width: 27px;
+      height: 2px;
       background-color: $header;
     }
-    .nav__hamburger--smaller::after { 
-      top: 15px;
-      width: 35px;
-    }
-  }
-}
 
-#title {
-  position: absolute;
-  top: 2%;
-  left: 50%;
-  transform: translate(-50%);
-
-  p {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Didot', sans-serif;
-    font-weight: 600;
-    color: $header;
-  }
-}
-
-.grid {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: -1;
-  background-color: $white;
-  .grid__container {
-    height: 100%;
-    position: relative;
-    margin: 0 auto;
-    max-width: 956px;
-    width: 100%;
-    .grid__line {
+    .nav__hamburger--2 {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background-color: $grid-line;
-    }
-    .grid__line:first-child {
-      left: 0;
-    }
-    .grid__line:nth-child(2) {
-      left: 25%;
-    }
-    .grid__line:nth-child(3) {
-      left: 50%;
-    }
-    .grid__line:nth-child(4) {
-      left: 75%;
-    }
-    .grid__line:last-child {
+      top: 6px;
       right: 0;
+      width: 27px;
+      height: 2px;
+      background-color: $header;
+    }
+    .nav__hamburger--3 {
+      position: absolute;
+      top: 12px;
+      right: 0;
+      width: 27px;
+      height: 2px;
+      background-color: $header;
     }
   }
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 76px;
+  width: calc(100% - 76px);
+  height: 100vh;
+  transition: all 0.5s ease;
+  z-index: -100;
+  display: none;
+}
+.menu.active {
+  display: flex;
+  z-index: 9000;
+}
+
+.menu__title, .menu__menu {
+  color: $white;
+}
+
+.menu__section {
+  position: relative;
+  left: 0;
+  background-color: $header;
+  border-right: 1px solid $button;
+  width: 16.7%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 400ms ease-in-out;
+}
+
+.menu__section:last-child {
+  border-right: none;
+}
+
+.menu__section:last-child:hover {
+  background-color: $header;
+}
+
+.menu__section:hover {
+  background-color: #272525;
+}
+
+.menu__section:nth-child(6) {
+  animation: slideDown 500ms cubic-bezier(.48,.69,.78,1.02);
+}
+
+.menu__section:nth-child(5) {
+  animation: slideDown 450ms cubic-bezier(.48,.69,.78,1.02);
+}
+
+.menu__section:nth-child(4) {
+  animation: slideDown 400ms cubic-bezier(.48,.69,.78,1.02);
+}
+
+.menu__section:nth-child(3) {
+  animation: slideDown 350ms cubic-bezier(.48,.69,.78,1.02);
+}
+
+.menu__section:nth-child(2) {
+  animation: slideDown 300ms cubic-bezier(.48,.69,.78,1.02);
+}
+
+.menu__section:nth-child(1) {
+  animation: slideDown 250ms cubic-bezier(.48,.69,.78,1.02);
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.menu__info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__menu {
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  font-family: 'Didot', sans-serif;
+  font-size: 80px;
+  letter-spacing: 3rem;
+  line-height: normal;
+}
+
+.menu__title {
+  position: relative;
+  margin-bottom: 120px;
+  z-index: 2;
+}
+
+.menu__title::before {
+  visibility: hidden;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 24px;
+  bottom: 0px;
+  left: -8px;
+  background-color: $button;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu__section:hover .menu__title::before {
+  visibility: visible;
+  width: 113%;
+}
+
+.nav-black {
+  background-color: $header;
+  border-right: 1px solid $button;
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.white {
+  color: $white !important;
+}
+
+.container-content {
+  width: calc(100% - 77px);
+  position: relative;
+  left: 77px;
 }
 
 .container {
@@ -206,7 +328,7 @@ nav {
   display: flex;
   justify-content: center;
   content: "\279D";
-  color: var(--header);
+  color: $header;
   transform: rotate(90deg);
 }
 
@@ -445,7 +567,7 @@ footer {
             height: 40px;
             margin-right: 8px;
             filter: brightness(0) invert(1);
-            transition: bottom .2s, filter .2s;
+            transition: bottom .1s, filter .1s;
             &:hover {
               bottom: 3px;
               filter: brightness(0) invert(1) drop-shadow(0 8px 5px rgba(0, 0, 0, .8));
@@ -484,10 +606,4 @@ footer {
     background-color: $button;
     z-index: -100;
   }
-}
-
-.btn {
-  padding: 8px 16px;
-  background-color: $header;
-  color: $white;
 }
