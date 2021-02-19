@@ -27,7 +27,7 @@ export default function Navbar() {
 
     return (
         <>
-            <Link href="/">
+            <Link href="#">
                 <a>
                     <nav>
                         <div className="title">

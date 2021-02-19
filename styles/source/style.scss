@@ -52,6 +52,8 @@ a {
   text-decoration: none;
 }
 
+// navbar -------------------------------------
+
 nav {
   position: fixed;
   width: 60px;
@@ -249,6 +251,8 @@ nav {
 .white {
   color: $white !important;
 }
+
+// index -------------------------------------
 
 .container-content {
   width: calc(100% - 77px);
@@ -605,5 +609,81 @@ footer {
     height: 15px;
     background-color: $button;
     z-index: -100;
+  }
+}
+
+// services -------------------------------------
+
+.header-top {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.service {
+  width: 100%;
+  margin: 0 auto;
+  .service__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .service__title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $primary;
+    width: 330px;
+    height: 200px;
+    padding: 3rem;
+    left: 100px;
+    h3 {
+      color: $white;
+      margin-top: 0;
+    }
+    a {
+      position: relative;
+      border: 1px solid $white;
+      color: $white;
+      padding: 1rem 1.5rem;
+      width: 110px;
+      &::before {
+        content: '';
+        background: $white;
+        position: absolute;
+        width: 0%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transition: 0.3s linear;
+      }
+      &::after {
+        max-height: 20px;
+        line-height: 0;
+        font-size: 1.5rem;
+        content: "\279D";
+        color: $white;
+        left: 20px;
+        top: 4px;
+        position: relative;
+      }
+      &:hover::before {
+        width: 100%;
+        z-index: -1;
+      }
+      &:hover::after {
+        color: $primary;
+        z-index: 10;
+      }
+      &:hover {
+        color: $primary;
+        z-index: 10;
+      }
+    }
+  }
+  .service__img img {
+    width: 700px;
+    height: 430px;
   }
 }

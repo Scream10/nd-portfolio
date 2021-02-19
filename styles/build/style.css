@@ -594,4 +594,78 @@ footer .footer-info .footer-info__social ul li .footer-logo--linkedin {
   z-index: -100;
 }
 
+.header-top {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.service {
+  width: 100%;
+  margin: 0 auto;
+}
+.service .service__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service .service__title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #0061F3;
+  width: 330px;
+  height: 200px;
+  padding: 3rem;
+  left: 100px;
+}
+.service .service__title h3 {
+  color: #FFFFFF;
+  margin-top: 0;
+}
+.service .service__title a {
+  position: relative;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 1rem 1.5rem;
+  width: 110px;
+}
+.service .service__title a::before {
+  content: "";
+  background: #FFFFFF;
+  position: absolute;
+  width: 0%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: 0.3s linear;
+}
+.service .service__title a::after {
+  max-height: 20px;
+  line-height: 0;
+  font-size: 1.5rem;
+  content: "➝";
+  color: #FFFFFF;
+  left: 20px;
+  top: 4px;
+  position: relative;
+}
+.service .service__title a:hover::before {
+  width: 100%;
+  z-index: -1;
+}
+.service .service__title a:hover::after {
+  color: #0061F3;
+  z-index: 10;
+}
+.service .service__title a:hover {
+  color: #0061F3;
+  z-index: 10;
+}
+.service .service__img img {
+  width: 700px;
+  height: 430px;
+}
+
 /*# sourceMappingURL=style.css.map */
